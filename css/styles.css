@@ -1,0 +1,247 @@
+body {
+  font-family: "Kaushan", sans-serif;
+  font-size: 100%;
+}
+
+/*--------------- header/nav ---------------*/
+svg {
+  height: 54px;
+  width: auto;
+}
+
+header {
+  position: relative;
+  /* padding: 1rem 0rem; */
+  background-color: #1f343a;
+}
+
+.nav-flex {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  /* max-width: 100%; */
+}
+
+.nav-btn {
+  margin-left: auto;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 0rem;
+  left: -15rem;
+  width: 15rem;
+  /* height: 30rem; */
+  background-color: #829aa2;
+  transition: 0.5s;
+  padding: 1.5rem 0rem;
+}
+
+.nav-show {
+  top: 0rem;
+  left: 0rem;
+  transition: 0.5s;
+}
+
+.nav-menu .nav-show {
+  text-align: center;
+}
+
+nav li {
+  margin: 0 auto;
+  width: 90%;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+nav li:hover {
+  background-color: cadetblue;
+}
+
+nav a {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: solid 1px black;
+  color: #ffffff;
+}
+
+@media (min-width: 900px) {
+  .nav-menu {
+    right: 0rem;
+    left: auto;
+    width: 90%;
+    padding: 18.5px 0rem 0rem 0rem;
+    background-color: #1f343a;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-list li:nth-child(1) {
+    margin-left: 0rem;
+  }
+
+  nav li {
+    margin: 0 auto;
+    width: auto;
+  }
+
+  nav a {
+    border-bottom: none;
+  }
+
+  .nav-flex {
+    padding-bottom: 3rem;
+  }
+
+  .nav-list-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+
+  .nav-list-top li {
+    margin: 0;
+  }
+
+  .nav-list-top__socials,
+  .nav-list-top__links {
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+
+  li.nav-list-top__search {
+    margin-left: 1rem;
+  }
+
+  .nav-list li:nth-child(6) {
+    margin-right: 0rem;
+  }
+}
+
+button {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* -----------------------GRID-------------------------- */
+
+/* .ListingCard is the “block” and represents the higher-level component
+.ListingCard__title is an “element” and represents a descendant of .ListingCard that helps compose the block as a whole.
+.ListingCard--featured is a “modifier” and represents a different state or variation on the .ListingCard block. */
+
+.page-container {
+  /* the navbar-left size */
+  padding-left: 0rem;
+}
+
+/* margin area for grid */
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, 1556px) 1fr;
+}
+
+/* regular section with margin */
+.page-grid__wrapper {
+  background-color: tomato;
+  height: 100px;
+  grid-column: 2 / span 1;
+  margin: 0 1rem;
+}
+
+/* full span section no margin */
+.page-grid__wrapper--fullspan {
+  background-color: purple;
+  height: 100px;
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 778px) {
+  .page-container {
+    padding-left: 5rem;
+  }
+}
+
+/* Flex */
+
+/* STEP 1: DETERMINE NUMBER OF CHILDREN AND THE FLEX VALUES */
+/* STEP 2: DETERMINE MIN-WIDTH OF CHILDREN ONE BY ONE */
+/* STEP 2: DETERMINE MAX-WIDTH OF CHILDREN ONE BY ONE */
+
+.flex-container {
+  display: flex;
+  background-color: gray;
+  padding: 5rem 0rem 12rem 0rem;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1556px;
+  justify-content: flex-start;
+}
+
+.item1 {
+  padding: 1rem;
+  background-color: tomato;
+  flex: 3;
+  min-width: 290px;
+  max-width: 377px;
+}
+
+.item2 {
+  padding: 1rem;
+  background-color: lightblue;
+  flex: 1;
+  min-width: 100px;
+  max-width: 115px;
+}
+
+.item3 {
+  padding: 1rem;
+  background-color: tomato;
+  flex: 8;
+  min-width: 30%;
+}
+
+/* fluid grid with break points. This gird has wrapping and the children snap to column width,... */
+.grid {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+  margin: 48px 0;
+}
+
+.grid-item-1 {
+  background-color: blue;
+  padding: 1rem;
+
+  grid-column: span 2;
+}
+
+.grid-item-1 p {
+  background-color: #ffffff;
+}
+
+.grid-item-2 {
+  background-color: violet;
+  padding: 1rem;
+
+  grid-column: span 4;
+  /* min-width: 300px; */
+}
+
+.grid-item-3 {
+  background-color: green;
+  padding: 1rem;
+
+  grid-column: span 8;
+}
+
+.grid-item-2 p {
+  background-color: #ffffff;
+}
+.grid-item-3 p {
+  background-color: #ffffff;
+}
